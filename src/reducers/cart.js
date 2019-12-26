@@ -2,7 +2,7 @@ const initState = {
     items: []
 };
 
-export default (state = initState, action) => {
+const cartReducer = (state = initState, action) => {
     switch (action.type) {
         case 'ADD_BOOK_TO_CART' :
             return {
@@ -22,3 +22,5 @@ export default (state = initState, action) => {
             return state;
     }
 }
+
+export default cartReducer

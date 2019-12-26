@@ -21,3 +21,11 @@ body .ui.cards>.card,
 .card{
   width: 270px;
 }
+
+body .ui.menu{
+  margin: 40px 0;
+}
+
+body .ui.menu:first-child{
+  margin-top: 40px;
+}
