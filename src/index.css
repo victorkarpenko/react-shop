@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.image{
+  height: 370px;
+  overflow: hidden;
+}
+
+body .ui.cards>.card,
+.card{
+  width: 270px;
+}
