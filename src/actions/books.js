@@ -5,11 +5,6 @@ const setBooks = (items) => ({
     payload: items
 });
 
-export const setReady = (ready) => ({
-    type: 'SET_READY',
-    payload: ready
-});
-
 export const setFilter = (filter) => ({
     type: 'SET_FILTER',
     payload: filter
