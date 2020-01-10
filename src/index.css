@@ -29,3 +29,7 @@ body .ui.menu{
 body .ui.menu:first-child{
   margin-top: 40px;
 }
+
+.popup {
+  max-width: 400px !important;
+}

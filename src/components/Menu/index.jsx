@@ -1,38 +1,32 @@
-import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import React from 'react'
+import {Menu, Popup} from 'semantic-ui-react'
+import CartPopup from "./CartPopup";
 
-export default class MenuMain extends Component {
-    state = {};
+export default (props) => {
+    return (
+        <Menu>
+            <Menu.Item
+                name='logo'
+            >
+                Магазин книг
+            </Menu.Item>
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
-    render() {
-        const { activeItem } = this.state;
-
-        return (
-            <Menu>
+            <Menu.Menu position='right'>
                 <Menu.Item
-                    name='logo'
                 >
-                    Магазин книг
+                    Итого: &nbsp; <b> {props.totalPrice} </b> руб.
                 </Menu.Item>
 
-
-                <Menu.Menu position='right'>
-                    <Menu.Item
-                    >
-                        Итого: &nbsp; <b> {this.props.totalPrice} </b> руб.
-                    </Menu.Item>
-
+                <Popup trigger={
                     <Menu.Item
                         name='cart'
-                        active={activeItem === 'cart'}
-                        onClick={this.handleItemClick}
                     >
-                        Корзина ({this.props.count})
+                        Корзина ({props.count})
                     </Menu.Item>
-                </Menu.Menu>
-            </Menu>
-        )
-    }
+                } content={props.items.length ? <CartPopup removeBook={props.removeBook} items={props.items}/> : 'Корзина пуста'} on={'click'} hideOnScroll/>
+
+            </Menu.Menu>
+        </Menu>
+    )
 }
