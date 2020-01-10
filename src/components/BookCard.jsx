@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Icon, Image} from "semantic-ui-react";
+import {Card, Icon, Image, Button} from "semantic-ui-react";
 
 const BookCard = (props) => {
     return (
@@ -16,6 +16,7 @@ const BookCard = (props) => {
                     {props.price} <Icon name={'rub'}/>
                 </span>
             </Card.Content>
+            <Button onClick={() => props.addBook(props)}>Добавить в корзину {props.addedCount>0 && `(${props.addedCount})`}</Button>
         </Card>
     );
 };

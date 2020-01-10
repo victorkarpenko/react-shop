@@ -1,7 +1,7 @@
 import React from 'react';
-import Menu from "./Menu";
+import Menu from "../containers/Menu";
 import {Card, Container} from "semantic-ui-react";
-import BookCard from "./BookCard";
+import BookCard from "../containers/BookCard";
 import Preloader from "./PreloaderComponent";
 import Filter from "../containers/Filter";
 

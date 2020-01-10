@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 
@@ -22,7 +21,7 @@ export default class MenuMain extends Component {
                 <Menu.Menu position='right'>
                     <Menu.Item
                     >
-                        Итого: &nbsp; <b> 0 </b> руб.
+                        Итого: &nbsp; <b> {this.props.totalPrice} </b> руб.
                     </Menu.Item>
 
                     <Menu.Item
@@ -30,7 +29,7 @@ export default class MenuMain extends Component {
                         active={activeItem === 'cart'}
                         onClick={this.handleItemClick}
                     >
-                        Корзина (0)
+                        Корзина ({this.props.count})
                     </Menu.Item>
                 </Menu.Menu>
             </Menu>

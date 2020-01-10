@@ -1,5 +1,7 @@
 const initState = {
-    items: []
+    items: [
+
+    ]
 };
 
 const cartReducer = (state = initState, action) => {
