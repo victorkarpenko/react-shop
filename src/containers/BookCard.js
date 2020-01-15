@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import {addBook, removeBook} from "../actions/cart";
+import {addBook} from "../redux/cart";
 import BookCard from "../components/BookCard";
 
 const mapStateToProps = ({cart}, {id}) => ({
@@ -7,4 +7,4 @@ const mapStateToProps = ({cart}, {id}) => ({
 });
 
 
-export default connect(mapStateToProps, {addBook, removeBook})(BookCard);
+export default connect(mapStateToProps, {addBook})(BookCard);

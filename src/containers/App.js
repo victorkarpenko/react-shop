@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {getBooks} from "../actions/books";
+import {getBooks} from "../redux/books";
 import App from "../components/App";
 import orderBy from 'lodash/orderBy'
 

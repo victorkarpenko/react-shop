@@ -12,31 +12,17 @@ const Filter = (props) => {
 
     return (
         <Menu secondary>
-            <Menu.Item
-                name='all'
-                active={props.filterBy === 'all'}
-                onClick={handleItemClick}
-            > Все</Menu.Item>
-            <Menu.Item
-                name='popular'
-                active={props.filterBy === 'popular'}
-                onClick={handleItemClick}
-            >Популярные</Menu.Item>
-            <Menu.Item
-                name='priceUp'
-                active={props.filterBy === 'priceUp'}
-                onClick={handleItemClick}
-            >Цена (дорогие)</Menu.Item>
-            <Menu.Item
-                name='priceDown'
-                active={props.filterBy === 'priceDown'}
-                onClick={handleItemClick}
-            >Цена (дешевые)</Menu.Item>
-            <Menu.Item
-                name='authors'
-                active={props.filterBy === 'authors'}
-                onClick={handleItemClick}
-            >Автор</Menu.Item>
+            {
+                props.filters.map((filter) => {
+                    return (
+                        <Menu.Item
+                            name={filter.name}
+                            active={props.filterBy === filter.name}
+                            onClick={handleItemClick}
+                        > {filter.title}</Menu.Item>
+                    )
+                })
+            }
             <Menu.Item><Input icon={"search"} value={props.searchQuery} onChange={onChangeSearchInput} placeholder={"Введите запрос"}/></Menu.Item>
         </Menu>
     );

@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import {addBook, removeBook} from "../actions/cart";
+import {removeBook} from "../redux/cart";
 import Menu from "../components/Menu";
 import uniqBy from 'lodash/uniqBy';
 
@@ -10,4 +10,4 @@ const mapStateToProps = state => ({
 });
 
 
-export default connect(mapStateToProps, {addBook, removeBook})(Menu);
+export default connect(mapStateToProps, {removeBook})(Menu);

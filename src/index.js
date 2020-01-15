@@ -5,7 +5,7 @@ import './index.css';
 import 'semantic-ui-css/semantic.min.css'
 
 import {Provider} from 'react-redux';
-import store from './store';
+import store from './redux/store';
 import AppContainer from "./containers/App";
 
 ReactDOM.render(<Provider store={store}>
